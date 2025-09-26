@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>vashrith-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>vashrith-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>vashrith-devops-cicd</id>
+        <url>https://vashrith-165756947246.d.codeartifact.us-east-2.amazonaws.com/maven/devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>vashrith-devops-cicd</id>
+    <name>vashrith-devops-cicd</name>
+    <url>https://vashrith-165756947246.d.codeartifact.us-east-2.amazonaws.com/maven/devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
